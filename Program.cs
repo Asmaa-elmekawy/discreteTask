@@ -1,72 +1,35 @@
-﻿using System.Data;
-
-namespace project_1
+﻿namespace Project_2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello at Prime application");
+            Console.WriteLine("Hello at perfect num app");
 
-            Console.WriteLine("please enter the 1st Number");
+            Console.WriteLine("Enter FirstNumber");
             int FirstNumber=int.Parse(Console.ReadLine());
 
-            Console.WriteLine("please enter 2nd Number");
+            Console.WriteLine("Enter SecondNumber");
             int SecondNumber=int.Parse(Console.ReadLine());
 
-            int i;
-
-            for (i =FirstNumber; i<=SecondNumber; i++)
+            for(int i=FirstNumber;i<=SecondNumber ;i++)
             {
-                if(i==2)
-                {
-                    Console.WriteLine(i+"is prime");
-                }
-                else if(i==3)
-                {
-                    Console.WriteLine(i+"is prime");
-                }
-                else if(i==5)
-                {
-                    Console.WriteLine(i + "is prime");
-                }
-            }
-            for (i = FirstNumber; i <= SecondNumber; i++)
-            {
-                if (i == 1)
-                {
-                    continue;
-                }
+                int y = 1;
+                int Sum = 0;
 
-                else if (i % 2 == 0)
+                while(y<i)
                 {
-                    continue;
+                    if (i % y == 0)
+                     Sum += y;
+                    y++;
                 }
-                else if (i % 3 == 0)
-                {
-                    continue;
-                }
-                else if (i % 5 == 0)
-                {
-                    continue;
-                }
-                Console.WriteLine(i + "is prime");
+                if (Sum == i)
+                    Console.WriteLine("Perfct numbers are "+i);
+           
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+           
+           
 
         }
     }
